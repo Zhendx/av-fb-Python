@@ -10,7 +10,8 @@ import pymongo
 class Chatty:
     def __init__(self):
         # Conexion con la base de datos
-        client = pymongo.MongoClient("mongodb+srv://bot:bot@cluster0.yixc3.mongodb.net/Bot?retryWrites=true&w=majority")
+        URI="--Aqui va la URI de mongoDB--"
+        client = pymongo.MongoClient(URI)
         db = client.Bot
         # Docs generados a partir del entrenamiento del chat Bot
         self.col = db["intents"]
